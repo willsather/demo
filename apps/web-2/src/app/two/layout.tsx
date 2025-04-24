@@ -8,10 +8,10 @@ import type { ReactNode } from "react";
 import "@demo/ui/styles/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "Turborepo Starter (Web)",
+  title: "Turborepo Starter (Web 2)",
   description:
     "Basic Next.js Template with Tailwind, shadcn/ui, Biome, and Vitest",
-  icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
+  icons: [{ rel: "icon", url: "/two/favicon.svg", type: "image/svg+xml" }],
 };
 
 export default function RootLayout({

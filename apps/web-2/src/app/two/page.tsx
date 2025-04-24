@@ -16,14 +16,14 @@ export default async function Home() {
       <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center justify-center text-center">
         <div className="mb-10 flex items-center justify-center gap-6">
           <Image
-            src="/nextjs.svg"
+            src="/two/nextjs.svg"
             alt="Next.js Logo"
             width={100}
             height={100}
           />
           <span className="font-bold text-3xl">+</span>
           <Image
-            src="/turborepo.svg"
+            src="/two/turborepo.svg"
             alt="Turborepo Logo"
             width={100}
             height={100}
