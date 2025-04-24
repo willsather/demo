@@ -3,15 +3,21 @@
   "applications": {
     "web-one": {
       "development": {
+        "local": 3000,
         "fallback": "willsather-demo.vercel.app"
-      }
+      },
+      "projectId": "prj_lbrt4zmCbtYc8zt1f01JbiiQT1sI"
     },
     "web-two": {
       "routing": [
         {
-          "paths": ["/two"]
+          "paths": ["/two", "/two/:path*"]
         }
-      ]
+      ],
+      "development": {
+        "local": 3001
+      },
+      "projectId": "prj_cIAkFZ1Tbz8623NISL8T9k71FhYr"
     }
   }
 }
