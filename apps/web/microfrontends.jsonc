@@ -11,7 +11,7 @@
     "web-two": {
       "routing": [
         {
-          "paths": ["/", "/:path*"]
+          "paths": ["/two", "/two/:path*"]
         }
       ],
       "development": {
