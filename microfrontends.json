@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "web-one": {
+      "development": {
+        "fallback": "willsather-demo.vercel.app"
+      }
+    },
+    "web-two": {
+      "routing": [
+        {
+          "paths": ["/two"]
+        }
+      ]
+    }
+  }
+}
