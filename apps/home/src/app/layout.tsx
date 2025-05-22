@@ -11,9 +11,8 @@ import StatusBar from "@/components/status-bar";
 import "@demo/ui/styles/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "Turborepo Starter (Web)",
-  description:
-    "Basic Next.js Template with Tailwind, shadcn/ui, Biome, and Vitest",
+  title: "Demo Home",
+  description: "Basic Next.js demo",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 
