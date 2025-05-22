@@ -15,14 +15,14 @@ export default async function ShopPage() {
       <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center justify-center text-center">
         <div className="mb-10 flex items-center justify-center gap-6">
           <Image
-            src="/two/nextjs.svg"
+            src="/shop/nextjs.svg"
             alt="Next.js Logo"
             width={100}
             height={100}
           />
           <span className="font-bold text-3xl">+</span>
           <Image
-            src="/two/turborepo.svg"
+            src="/shop/turborepo.svg"
             alt="Turborepo Logo"
             width={100}
             height={100}

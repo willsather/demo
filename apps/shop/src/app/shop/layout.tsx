@@ -11,7 +11,7 @@ import "@demo/ui/styles/tailwind.css";
 export const metadata: Metadata = {
   title: "Demo Shop",
   description: "Basic Next.js e-commerce demo",
-  icons: [{ rel: "icon", url: "/two/favicon.svg", type: "image/svg+xml" }],
+  icons: [{ rel: "icon", url: "/shop/favicon.svg", type: "image/svg+xml" }],
 };
 
 export default function RootLayout({
