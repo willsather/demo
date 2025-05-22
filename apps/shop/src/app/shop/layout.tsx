@@ -6,6 +6,8 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
+import StatusBar from "@demo/components/status-bar";
+
 import "@demo/ui/styles/tailwind.css";
 
 export const metadata: Metadata = {
@@ -23,6 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <PrefetchCrossZoneLinksProvider>
+          <StatusBar />
+
           {children}
 
           <Analytics />
