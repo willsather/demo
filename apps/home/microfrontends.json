@@ -4,7 +4,7 @@
     "demo-home": {
       "development": {
         "local": 3000,
-        "fallback": "willsather-demo.vercel.app"
+        "fallback": "demo.sather.ws"
       },
       "projectId": "prj_hU7b2hLY7vTwAU79rHWe1wTWJB3v"
     },
