@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@demo/ui": "workspace:*",
+    "@demo/components": "workspace:*",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "@vercel/toolbar": "^0.1.36",
@@ -34,12 +35,12 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react-swc": "^3.7.2",
-    "@vitest/coverage-istanbul": "^3.0.7",
+    "@vitest/coverage-istanbul": "^3.1.4",
     "jsdom": "^25.0.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.4",
     "typescript": "5.4.5",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.4"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {

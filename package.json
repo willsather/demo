@@ -11,9 +11,9 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@demo/typescript-config": "workspace:*",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.10.6",
-    "turbo": "^2.5.0"
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.50",
+    "turbo": "^2.5.3"
   },
   "packageManager": "pnpm@10.7.0",
   "engines": {
