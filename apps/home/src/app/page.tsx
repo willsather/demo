@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { showHeroCTA } from "@/lib/flags";
 import { Button } from "@demo/ui/components/button";
-import Link from "next/link";
 
 export default async function Home() {
   const showCTA = await showHeroCTA();
@@ -30,40 +29,11 @@ export default async function Home() {
           />
         </div>
 
-        <h1 className="mb-4 font-extrabold text-gray-900">Will Sather Demo</h1>
-
-        <p className="mb-8 text-gray-600 text-lg">
-          This starter is powered by{" "}
-          <Link className="font-bold underline" href="https://nextjs.org">
-            Next.js
-          </Link>{" "}
-          and{" "}
-          <Link className="font-bold underline" href="https://turbo.build">
-            Turborepo
-          </Link>
-          , optimized for speed, scalability, and smooth DX preconfigured with
-          batteries included tools like{" "}
-          <Link className="font-bold underline" href="https://tailwindcss.com">
-            Tailwind
-          </Link>
-          ,{" "}
-          <Link className="font-bold underline" href="https://ui.shadcn.com">
-            shadcn/ui
-          </Link>
-          ,{" "}
-          <Link className="font-bold underline" href="https://biomejs.dev">
-            Biome
-          </Link>
-          , and{" "}
-          <Link className="font-bold underline" href="https://vitest.dev">
-            Vitest
-          </Link>
-          .
-        </p>
+        <h1 className="mb-4 font-extrabold text-gray-900">Demo Home</h1>
 
         {showCTA ? (
-          <a href="https://github.com/willsather/turborepo-starter">
-            <Button>Learn More</Button>
+          <a href="/shop">
+            <Button>Shop Now</Button>
           </a>
         ) : null}
       </div>

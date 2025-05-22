@@ -32,8 +32,8 @@ export default async function ShopPage() {
         <h1 className="mb-4 font-extrabold text-gray-900">Demo Shop</h1>
 
         {showCTA ? (
-          <a href="https://github.com/willsather/turborepo-starter">
-            <Button>Learn More</Button>
+          <a href="/">
+            <Button>Go Home</Button>
           </a>
         ) : null}
       </div>
