@@ -5,6 +5,5 @@ export function GET(request: Request) {
 
   return Response.json({
     region,
-    status: "operational",
   });
 }

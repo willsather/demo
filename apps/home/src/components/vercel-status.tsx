@@ -1,69 +1,81 @@
+"use client"
+
 import Link from "next/link";
-import type { ReactElement } from "react";
+import {ReactElement, useEffect, useState} from "react";
 
 interface Incident {
   name?: string;
   impact?: "critical" | "major";
 }
 
-export async function getVercelStatus(): Promise<Incident[]> {
-  const res = await fetch("https://www.vercel.com/status-api");
+export function VercelStatusIndicator(): ReactElement {
+  const [incidents, setIncidents] = useState<Incident[]>();
+  const [loading, setLoading] = useState<boolean>(true);
 
-  if (!res.ok) {
-    const errorData = await res.text();
-    throw new Error(errorData);
-  }
+  useEffect(() => {
+    async function fetchStatus() {
+      const res = await fetch("/api/status");
 
-  return (await res.json()) as Incident[];
-}
+      if (!res.ok) {
+        const errorData = await res.text();
+        setLoading(false)
+        throw new Error(`${res.status}: ${errorData || "Unknown error."}`);
+      }
 
-const getStatusColor = (incident: Incident | null | undefined): string => {
-  if (!incident) {
-    return "success";
-  }
+      const json = (await res.json()) as { incidents: Incident[]};
+      setIncidents(json.incidents);
+      setLoading(false);
+    }
 
-  if (incident.impact === "critical" || incident.impact === "major") {
-    return "error";
-  }
+    void fetchStatus();
+  }, []);
 
-  return "warning";
-};
+  const getStatusCircle = (
+      incident: Incident | null | undefined,
+      loading: boolean,
+  ): ReactElement => {
+    if (loading) {
+      return <div className="size-2 rounded-full border-4 border-gray-500 bg-white" />
+    }
 
-const getStatusType = (incident: Incident | null | undefined): string => {
-  if (!incident) {
-    return "success";
-  }
+    if (!incident) {
+      return (
+          <div className="size-2 rounded-full bg-emerald-500" />
+      );
+    }
 
-  if (incident.impact === "critical" || incident.impact === "major") {
-    return "error";
-  }
+    if (incident.impact === "major") {
+      return (
+          <div className="size-2 rounded-full bg-yellow-500" />
+      );
+    }
 
-  return "warning";
-};
+    if (incident.impact === "critical") {
+      return <div className="size-2 rounded-full bg-red-500" />;
+    }
 
-export async function VercelStatusIndicator(): Promise<ReactElement> {
-  const incidents = await getVercelStatus();
+    return (
+        <div className="size-2 rounded-full border-4 border-gray-500 bg-white" />
+    );
+  };
 
   const incident = Array.isArray(incidents)
     ? incidents[incidents.length - 1]
     : null;
 
-  const status = !incidents ? "secondary" : getStatusColor(incident);
-  const statusType = !incidents ? "secondary" : getStatusType(incident);
-
   return (
-    <Link href="https://vercel-status.com">
-      <div>
-        <p>
-          <span>{incident?.name}</span>
+    <Link href="https://vercel-status.com" className="flex items-center justify-center gap-2">
+      {getStatusCircle(incident, loading)}
 
-          {incidents === undefined
-            ? "Loading status..."
-            : incident
-              ? incident.name
-              : "All systems normal."}
-        </p>
-      </div>
+      <p>
+        <span>{incident?.name}</span>
+
+        {incidents == null
+          ? "Loading status..."
+          : incident
+            ? incident.name
+            : "All systems normal."}
+      </p>
     </Link>
   );
 }

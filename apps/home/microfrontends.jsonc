@@ -6,7 +6,8 @@
       "development": {
         "local": 3000,
         "fallback": "demo.sather.ws"
-      }
+      },
+      "projectId": "prj_hU7b2hLY7vTwAU79rHWe1wTWJB3v"
     },
     "demo-shop": {
       "packageName": "@demo/shop",
@@ -17,7 +18,8 @@
         {
           "paths": ["/shop", "/shop/:path*"]
         }
-      ]
+      ],
+      "projectId": "prj_L2dZBPmaqwcd9IjPJj9R42eS7Ktx"
     }
   }
 }
