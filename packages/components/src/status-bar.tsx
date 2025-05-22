@@ -37,7 +37,7 @@ export default function StatusBar() {
           </svg>
         </div>
 
-        <div className="flex items-center gap-4 font-mono text-xs text-white">
+        <div className="flex items-center gap-4 font-mono text-white text-xs">
           <p>{region != null ? region : ""}</p>
 
           <VercelStatusIndicator />
