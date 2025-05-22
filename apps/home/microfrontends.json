@@ -2,22 +2,22 @@
   "$schema": "https://openapi.vercel.sh/microfrontends.json",
   "applications": {
     "demo-home": {
+      "packageName": "@demo/home",
       "development": {
         "local": 3000,
         "fallback": "demo.sather.ws"
-      },
-      "projectId": "prj_hU7b2hLY7vTwAU79rHWe1wTWJB3v"
+      }
     },
     "demo-shop": {
+      "packageName": "@demo/shop",
+      "development": {
+        "local": 3001
+      },
       "routing": [
         {
           "paths": ["/shop", "/shop/:path*"]
         }
-      ],
-      "development": {
-        "local": 3001
-      },
-      "projectId": "prj_L2dZBPmaqwcd9IjPJj9R42eS7Ktx"
+      ]
     }
   }
 }
