@@ -1,23 +1,23 @@
 {
   "$schema": "https://openapi.vercel.sh/microfrontends.json",
   "applications": {
-    "web-one": {
+    "demo-home": {
       "development": {
         "local": 3000,
         "fallback": "willsather-demo.vercel.app"
       },
-      "projectId": "prj_lbrt4zmCbtYc8zt1f01JbiiQT1sI"
+      "projectId": "prj_hU7b2hLY7vTwAU79rHWe1wTWJB3v"
     },
-    "web-two": {
+    "demo-shop": {
       "routing": [
         {
-          "paths": ["/two", "/two/:path*"]
+          "paths": ["/shop", "/shop/:path*"]
         }
       ],
       "development": {
         "local": 3001
       },
-      "projectId": "prj_cIAkFZ1Tbz8623NISL8T9k71FhYr"
+      "projectId": "prj_L2dZBPmaqwcd9IjPJj9R42eS7Ktx"
     }
   }
 }
