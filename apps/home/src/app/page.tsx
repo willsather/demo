@@ -30,9 +30,7 @@ export default async function Home() {
           />
         </div>
 
-        <h1 className="mb-4 font-extrabold text-gray-900">
-          Welcome to Turborepo Starter #1
-        </h1>
+        <h1 className="mb-4 font-extrabold text-gray-900">Will Sather Demo</h1>
 
         <p className="mb-8 text-gray-600 text-lg">
           This starter is powered by{" "}
