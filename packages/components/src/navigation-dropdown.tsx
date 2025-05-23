@@ -25,28 +25,37 @@ const navigationOptions = [
   },
 ];
 
+function getDemoByPath(pathname: string) {
+  if (pathname.includes("/shop")) {
+    return "/shop";
+  }
+
+  return "/";
+}
+
 export function NavigationDropdown() {
   const router = useRouter();
-  const pathname = usePathname();
+
+  const demo = getDemoByPath(usePathname());
 
   const handleNavigation = (value: string) => {
     router.push(value);
   };
 
   const currentOption = navigationOptions.find(
-    (option) => option.value === pathname,
+    (option) => option.value === demo,
   );
 
   return (
     <div className="mx-auto w-full max-w-sm">
-      <Select value={pathname} onValueChange={handleNavigation}>
+      <Select value={demo} onValueChange={handleNavigation}>
         <SelectTrigger className="h-7 w-full border-muted-foreground text-muted-foreground">
           <SelectValue>
             <div className="flex items-center gap-2 text-muted-foreground">
               {currentOption?.icon && (
                 <currentOption.icon className="size-4 text-muted-foreground" />
               )}
-              {currentOption?.label || "Select a page"}
+              {currentOption?.label || "Select a demo"}
             </div>
           </SelectValue>
         </SelectTrigger>
