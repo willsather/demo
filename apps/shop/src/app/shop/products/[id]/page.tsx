@@ -54,7 +54,7 @@ export default async function ProductPage({
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-6 md:px-10 lg:px-20">
+        <div className="mx-auto px-6 md:px-10 lg:px-20">
           <div className="flex items-center text-gray-600 text-sm">
             <Link href="/shop" className="hover:text-blue-600">
               Home
@@ -67,7 +67,7 @@ export default async function ProductPage({
 
       {/* Product Detail Section */}
       <section className="px-6 py-12 md:px-10 lg:px-20">
-        <div className="container mx-auto">
+        <div className="mx-auto">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             {/* Product Image */}
             <div className="flex items-center justify-center rounded-lg bg-gray-50 p-8">
@@ -99,13 +99,6 @@ export default async function ProductPage({
                 <Button size="lg" className="w-full sm:w-auto">
                   Add to Cart
                 </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto"
-                >
-                  Add to Wishlist
-                </Button>
               </div>
             </div>
           </div>
@@ -115,7 +108,7 @@ export default async function ProductPage({
       {/* Related Products Section */}
       {relatedProducts.length > 0 && (
         <section className="bg-gray-50 px-6 py-12 md:px-10 lg:px-20">
-          <div className="container mx-auto">
+          <div className="mx-auto">
             <h2 className="mb-8 font-bold text-2xl text-gray-900">
               Related Products
             </h2>

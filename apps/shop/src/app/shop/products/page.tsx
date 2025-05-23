@@ -15,7 +15,7 @@ export default async function ProductsPage() {
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-6 md:px-10 lg:px-20">
+        <div className="mx-auto px-6 md:px-10 lg:px-20">
           <div className="flex items-center text-gray-600 text-sm">
             <Link href="/shop" className="hover:text-blue-600">
               Home

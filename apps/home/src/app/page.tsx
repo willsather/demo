@@ -25,7 +25,9 @@ export default async function Home() {
           />
         </div>
 
-        <h1 className="mb-4 font-extrabold text-gray-900">Demo Home</h1>
+        <h1 className="mb-4 font-extrabold text-gray-900 text-xl md:text-5xl">
+          Demo Home
+        </h1>
 
         {showCTA ? (
           <a href="/shop">

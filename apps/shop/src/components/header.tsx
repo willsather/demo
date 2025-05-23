@@ -10,10 +10,12 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-6 py-3 md:px-10 lg:px-20">
         <div className="flex h-16 justify-between">
           <Link href="/shop" className="flex flex-shrink-0 items-center">
-            <span className="font-bold text-blue-600 text-xl">Shape Shop</span>
+            <h1 className="font-bold text-blue-600 text-xl md:text-4xl">
+              Shape Shop
+            </h1>
           </Link>
 
           {/* Desktop navigation */}
