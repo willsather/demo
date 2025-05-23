@@ -6,7 +6,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import StatusBar from "@/components/status-bar";
+import StatusBar from "@demo/components/status-bar";
 
 import "@demo/ui/styles/tailwind.css";
 

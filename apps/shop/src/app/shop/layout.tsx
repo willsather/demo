@@ -6,6 +6,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
+import Header from "@/components/header";
 import StatusBar from "@demo/components/status-bar";
 
 import "@demo/ui/styles/tailwind.css";
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={GeistSans.className}>
         <PrefetchCrossZoneLinksProvider>
           <StatusBar />
+          <Header />
 
           {children}
 

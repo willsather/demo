@@ -1,0 +1,250 @@
+{
+  "categories": [
+    {
+      "id": "basic",
+      "name": "Basic Shapes",
+      "description": "Fundamental geometric shapes for all your needs",
+      "image": "/shop/shapes/basic.svg"
+    },
+    {
+      "id": "complex",
+      "name": "Complex Shapes",
+      "description": "Advanced geometric shapes for sophisticated designs",
+      "image": "/shop/shapes/complex.svg"
+    },
+    {
+      "id": "3d",
+      "name": "3D Shapes",
+      "description": "Three-dimensional shapes for spatial designs",
+      "image": "/shop/shapes/3d.svg"
+    },
+    {
+      "id": "custom",
+      "name": "Custom Shapes",
+      "description": "Unique shapes designed for special purposes",
+      "image": "/shop/shapes/custom.svg"
+    }
+  ],
+  "products": [
+    {
+      "id": "circle-1",
+      "name": "Perfect Circle",
+      "description": "A mathematically perfect circle with infinite symmetry",
+      "price": 19.99,
+      "category": "basic",
+      "featured": false,
+      "image": "/shop/shapes/circle.svg",
+      "details": "Our Perfect Circle is crafted with mathematical precision. Every point on its edge is exactly the same distance from the center, creating a shape of perfect symmetry and balance."
+    },
+    {
+      "id": "square-1",
+      "name": "Square Supreme",
+      "description": "A perfect square with four equal sides and right angles",
+      "price": 14.99,
+      "category": "basic",
+      "featured": false,
+      "image": "/shop/shapes/square.svg",
+      "details": "The Square Supreme features four equal sides and four perfect right angles. Its simplicity and stability make it a foundational shape for countless applications."
+    },
+    {
+      "id": "triangle-1",
+      "name": "Equilateral Triangle",
+      "description": "A triangle with three equal sides and angles",
+      "price": 12.99,
+      "category": "basic",
+      "featured": true,
+      "image": "/shop/shapes/triangle.svg",
+      "details": "Our Equilateral Triangle boasts three equal sides and three equal angles, creating a perfectly balanced triangular shape that's both stable and visually appealing."
+    },
+    {
+      "id": "hexagon-1",
+      "name": "Hexagon Deluxe",
+      "description": "A six-sided polygon with equal sides and angles",
+      "price": 24.99,
+      "category": "complex",
+      "featured": false,
+      "image": "/shop/shapes/hexagon.svg",
+      "details": "The Hexagon Deluxe features six equal sides and six equal angles. Found throughout nature in honeycomb structures, this shape offers excellent space efficiency and structural integrity."
+    },
+    {
+      "id": "star-1",
+      "name": "Five-Point Star",
+      "description": "A classic five-pointed star shape",
+      "price": 29.99,
+      "category": "complex",
+      "featured": false,
+      "image": "/shop/shapes/star.svg",
+      "details": "Our Five-Point Star is a perfect pentagram with five equal points. Its distinctive shape has been used as a symbol across cultures for centuries."
+    },
+    {
+      "id": "spiral-1",
+      "name": "Hypnotic Spiral",
+      "description": "A mesmerizing spiral that draws the eye inward",
+      "price": 32.99,
+      "category": "complex",
+      "featured": false,
+      "image": "/shop/shapes/spiral.svg",
+      "details": "Our Hypnotic Spiral features concentric circles that create a mesmerizing visual effect. The elegant curves draw the eye inward, making it perfect for designs that need to capture attention."
+    },
+    {
+      "id": "gear-1",
+      "name": "Precision Gear",
+      "description": "A mechanical gear with perfectly aligned teeth",
+      "price": 27.99,
+      "category": "complex",
+      "featured": false,
+      "image": "/shop/shapes/gear.svg",
+      "details": "The Precision Gear is designed with mathematical accuracy. Its perfectly aligned teeth and central hub represent mechanical precision and the beauty of engineering design."
+    },
+    {
+      "id": "cube-1",
+      "name": "Perfect Cube",
+      "description": "A three-dimensional square with equal sides",
+      "price": 34.99,
+      "category": "3d",
+      "featured": true,
+      "image": "/shop/shapes/cube.svg",
+      "details": "The Perfect Cube is a three-dimensional shape with six equal square faces. Its perfect symmetry and stability make it a fundamental 3D shape."
+    },
+    {
+      "id": "sphere-1",
+      "name": "Smooth Sphere",
+      "description": "A perfectly round three-dimensional object",
+      "price": 39.99,
+      "category": "3d",
+      "featured": false,
+      "image": "/shop/shapes/sphere.svg",
+      "details": "Our Smooth Sphere is a perfectly round three-dimensional object where every point on its surface is equidistant from its center. It's the 3D equivalent of a circle."
+    },
+    {
+      "id": "heart-1",
+      "name": "Classic Heart",
+      "description": "The timeless symbol of love and affection",
+      "price": 49.99,
+      "category": "custom",
+      "featured": false,
+      "image": "/shop/shapes/heart.svg",
+      "details": "The Classic Heart is our most popular custom shape. Its distinctive form has become the universal symbol for love and affection."
+    },
+    {
+      "id": "puzzle-1",
+      "name": "Perfect Puzzle Piece",
+      "description": "A single puzzle piece ready to connect",
+      "price": 45.99,
+      "category": "custom",
+      "featured": false,
+      "image": "/shop/shapes/puzzle.svg",
+      "details": "Our Perfect Puzzle Piece represents connection and completion. Its interlocking tabs and spaces symbolize how different elements can come together to create something whole."
+    },
+    {
+      "id": "pyramid-1",
+      "name": "Elegant Pyramid",
+      "description": "A three-dimensional triangle with a square base",
+      "price": 36.99,
+      "category": "3d",
+      "featured": false,
+      "image": "/shop/shapes/pyramid.svg",
+      "details": "The Elegant Pyramid features a square base and four triangular faces that meet at a point. This iconic shape has been used in architecture and design for millennia, symbolizing strength and permanence."
+    },
+    {
+      "id": "cylinder-1",
+      "name": "Perfect Cylinder",
+      "description": "A three-dimensional shape with circular ends",
+      "price": 32.99,
+      "category": "3d",
+      "featured": false,
+      "image": "/shop/shapes/cylinder.svg",
+      "details": "Our Perfect Cylinder combines two circular faces connected by a curved rectangular surface. Its versatile form is found throughout design, from containers to architectural columns."
+    },
+    {
+      "id": "torus-1",
+      "name": "Golden Torus",
+      "description": "A donut-shaped three-dimensional ring",
+      "price": 42.99,
+      "category": "3d",
+      "featured": false,
+      "image": "/shop/shapes/torus.svg",
+      "details": "The Golden Torus is a sophisticated 3D shape formed by rotating a circle around an axis. Its continuous surface with a hole in the center creates a visually intriguing form that's both balanced and dynamic."
+    },
+    {
+      "id": "rectangle-1",
+      "name": "Perfect Rectangle",
+      "description": "A rectangle with precise proportions and clean lines",
+      "price": 15.99,
+      "category": "basic",
+      "featured": false,
+      "image": "/shop/shapes/rectangle.svg",
+      "details": "Our Perfect Rectangle features clean lines and precise proportions. Its elongated form provides a stable base while maintaining an elegant, balanced appearance that works well in various design contexts."
+    },
+    {
+      "id": "oval-1",
+      "name": "Elegant Oval",
+      "description": "A smooth, curved oval with perfect symmetry",
+      "price": 18.99,
+      "category": "basic",
+      "featured": false,
+      "image": "/shop/shapes/oval.svg",
+      "details": "The Elegant Oval combines the perfect symmetry of a circle with an elongated form. Its smooth, continuous curve creates a sense of motion and flow, making it ideal for designs that need a softer, more organic feel."
+    },
+    {
+      "id": "pentagon-1",
+      "name": "Regular Pentagon",
+      "description": "A five-sided polygon with equal sides and angles",
+      "price": 21.99,
+      "category": "basic",
+      "featured": true,
+      "image": "/shop/shapes/pentagon.svg",
+      "details": "Our Regular Pentagon features five equal sides and five equal angles. This balanced shape has been used in architecture and design for centuries, symbolizing harmony and mathematical precision."
+    },
+    {
+      "id": "rhombus-1",
+      "name": "Diamond Rhombus",
+      "description": "A perfectly proportioned diamond shape",
+      "price": 17.99,
+      "category": "basic",
+      "featured": false,
+      "image": "/shop/shapes/rhombus.svg",
+      "details": "The Diamond Rhombus features four equal sides with perfectly balanced angles. Its distinctive diamond shape creates a sense of dynamic tension and movement, making it perfect for designs that need to convey energy and precision."
+    },
+    {
+      "id": "trapezoid-1",
+      "name": "Balanced Trapezoid",
+      "description": "A four-sided shape with two parallel sides",
+      "price": 16.99,
+      "category": "basic",
+      "featured": false,
+      "image": "/shop/shapes/trapezoid.svg",
+      "details": "Our Balanced Trapezoid combines stability and dynamism with its two parallel sides of different lengths. This versatile shape creates a sense of perspective and depth, making it useful for creating visual interest in various design applications."
+    },
+    {
+      "id": "cloud-1",
+      "name": "Fluffy Cloud",
+      "description": "A soft, billowing cloud shape with gentle curves",
+      "price": 42.99,
+      "category": "custom",
+      "featured": false,
+      "image": "/shop/shapes/cloud.svg",
+      "details": "Our Fluffy Cloud shape captures the essence of a perfect cumulus cloud. Its soft, billowing curves create a sense of lightness and tranquility, making it ideal for designs that need to convey a sense of peace, dreams, or imagination."
+    },
+    {
+      "id": "flame-1",
+      "name": "Dynamic Flame",
+      "description": "An energetic flame with vibrant colors",
+      "price": 39.99,
+      "category": "custom",
+      "featured": false,
+      "image": "/shop/shapes/flame.svg",
+      "details": "The Dynamic Flame shape brings energy and movement to any design. With its vibrant colors and flowing curves, this shape symbolizes passion, transformation, and creative energy. Perfect for designs that need to convey warmth, power, or inspiration."
+    },
+    {
+      "id": "wave-1",
+      "name": "Ocean Wave",
+      "description": "A flowing wave with layered blue tones",
+      "price": 36.99,
+      "category": "custom",
+      "featured": true,
+      "image": "/shop/shapes/wave.svg",
+      "details": "Our Ocean Wave shape captures the rhythmic motion of water with its flowing curves and layered blue tones. This shape evokes feelings of calm, continuity, and natural beauty, making it perfect for designs related to water, tranquility, or continuous movement."
+    }
+  ]
+}

@@ -5,11 +5,11 @@ import { type ReactElement, useEffect, useState } from "react";
 
 interface Incident {
   name?: string;
-  impact?: "critical" | "major";
+  impact?: "minor" | "critical" | "major";
 }
 
 export function VercelStatusIndicator(): ReactElement {
-  const [incidents, setIncidents] = useState<Incident[]>();
+  const [incident, setIncident] = useState<Incident | null>();
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -17,13 +17,17 @@ export function VercelStatusIndicator(): ReactElement {
       const res = await fetch("/api/status");
 
       if (!res.ok) {
-        const errorData = await res.text();
         setLoading(false);
-        throw new Error(`${res.status}: ${errorData || "Unknown error."}`);
+        return;
       }
 
       const json = (await res.json()) as { incidents: Incident[] };
-      setIncidents(json.incidents);
+
+      const jsonIncident = Array.isArray(json.incidents)
+        ? json.incidents[json.incidents.length - 1]
+        : undefined;
+
+      setIncident(jsonIncident);
       setLoading(false);
     }
 
@@ -34,17 +38,19 @@ export function VercelStatusIndicator(): ReactElement {
     incident: Incident | null | undefined,
     loading: boolean,
   ): ReactElement => {
-    if (loading) {
+    // null is an error fetching status
+    if (loading || incident === null) {
       return (
         <div className="size-2 rounded-full border-4 border-gray-500 bg-white" />
       );
     }
 
-    if (!incident) {
+    // undefined is no incident
+    if (incident === undefined) {
       return <div className="size-2 rounded-full bg-emerald-500" />;
     }
 
-    if (incident.impact === "major") {
+    if (incident.impact === "minor" || incident.impact === "major") {
       return <div className="size-2 rounded-full bg-yellow-500" />;
     }
 
@@ -52,26 +58,21 @@ export function VercelStatusIndicator(): ReactElement {
       return <div className="size-2 rounded-full bg-red-500" />;
     }
 
+    // something else
     return (
       <div className="size-2 rounded-full border-4 border-gray-500 bg-white" />
     );
   };
 
-  const incident = Array.isArray(incidents)
-    ? incidents[incidents.length - 1]
-    : null;
-
   return (
     <Link
       href="https://vercel-status.com"
-      className="flex items-center justify-center gap-2"
+      className="flex items-center justify-end gap-2"
     >
       {getStatusCircle(incident, loading)}
 
       <p>
-        <span>{incident?.name}</span>
-
-        {incidents == null
+        {loading
           ? "Loading status..."
           : incident
             ? incident.name

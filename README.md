@@ -1,8 +1,8 @@
-# Turborepo Starter
+# Demo
+
+This is a Turborepo configured with Microfrontends to demo Vercel & Next.js
 
 ## Getting Started
-
-This repository is a simple Turborepo starter which contains the basic Turborepo setup and configuration.
 
 To start using, you can use the following commands:
 

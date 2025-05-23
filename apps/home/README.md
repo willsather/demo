@@ -1,4 +1,4 @@
-# Next.js Starter (App Router)
+# Demo Home
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ deployment, rather than the standard rolling 30-day average.
 This starter uses the [Flags SDK](https://flags-sdk.dev/) to abstract feature flags and integrate into the [Vercel
 Toolbar](https://vercel.com/docs/vercel-toolbar)
 
-1. Generate `FLAGS_TOKEN`
+1. Generate `FLAGS_SECRET`
     ```bash
    node -e "console.log(crypto.randomBytes(32).toString('base64url'))"
    ```
@@ -51,8 +51,8 @@ Toolbar](https://vercel.com/docs/vercel-toolbar)
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) — learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) — an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) — your feedback and contributions
 are welcome!
