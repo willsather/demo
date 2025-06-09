@@ -5,7 +5,7 @@ import { VercelToolbar } from "@vercel/toolbar/next";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import "./tailwind.css";
+import "@demo/ui/styles/tailwind.css";
 
 export const metadata: Metadata = {
   title: "Demo Observability",
