@@ -11,6 +11,8 @@ import StatusBar from "@demo/components/status-bar";
 
 import "@demo/ui/styles/tailwind.css";
 
+import { env } from "@/env";
+
 export const metadata: Metadata = {
   title: "Demo Shop",
   description: "Basic Next.js e-commerce demo",
@@ -26,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <PrefetchCrossZoneLinksProvider>
-          <StatusBar url={process.env.VERCEL_URL ?? ""} />
+          <StatusBar url={env.BASE_URL} />
 
           <Header />
 

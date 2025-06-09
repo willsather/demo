@@ -9,23 +9,24 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@demo/ui": "workspace:*",
     "@demo/components": "workspace:*",
+    "@demo/ui": "workspace:*",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/functions": "^2.0.0",
+    "@vercel/microfrontends": "^1.2.4",
     "@vercel/speed-insights": "^1.2.0",
     "@vercel/toolbar": "^0.1.36",
-    "@vercel/microfrontends": "^1.2.4",
-    "@vercel/functions": "^2.0.0",
     "flags": "^3.2.0",
     "geist": "^1.3.1",
     "lucide-react": "^0.487.0",
     "next": "^15.3.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.56"
   },
   "devDependencies": {
-    "@demo/vitest-config": "workspace:*",
     "@demo/typescript-config": "workspace:*",
+    "@demo/vitest-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

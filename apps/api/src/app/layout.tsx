@@ -5,8 +5,11 @@ import { VercelToolbar } from "@vercel/toolbar/next";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import "@demo/ui/styles/tailwind.css";
 import StatusBar from "@demo/components/status-bar";
+
+import "@demo/ui/styles/tailwind.css";
+
+import { env } from "@/env";
 
 export const metadata: Metadata = {
   title: "Demo Observability",
@@ -23,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StatusBar url={process.env.VERCEL_URL ?? ""} />
+        <StatusBar url={env.BASE_URL} />
 
         {children}
 
