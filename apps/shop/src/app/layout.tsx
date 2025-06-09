@@ -26,7 +26,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <PrefetchCrossZoneLinksProvider>
-          <StatusBar />
+          <StatusBar url={process.env.VERCEL_URL ?? ""} />
+
           <Header />
 
           {children}

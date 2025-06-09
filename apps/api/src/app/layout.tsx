@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 import "@demo/ui/styles/tailwind.css";
+import StatusBar from "@demo/components/status-bar";
 
 export const metadata: Metadata = {
   title: "Demo Observability",
@@ -22,6 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <StatusBar url={process.env.VERCEL_URL ?? ""} />
+
         {children}
 
         <Analytics />

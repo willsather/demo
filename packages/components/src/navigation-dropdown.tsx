@@ -1,76 +1,37 @@
-"use client";
-
-import { Home, ShoppingBag } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@demo/ui/select";
+import { Code, Home, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
-const navigationOptions = [
-  {
-    value: "/",
-    label: "Home",
-    icon: Home,
-  },
-  {
-    value: "/shop",
-    label: "Shop",
-    icon: ShoppingBag,
-  },
-];
-
-function getDemoByPath(pathname: string) {
-  if (pathname.includes("/shop")) {
-    return "/shop";
-  }
-
-  return "/";
-}
-
-export function NavigationDropdown() {
-  const router = useRouter();
-
-  const demo = getDemoByPath(usePathname());
-
-  const handleNavigation = (value: string) => {
-    router.replace(value);
-  };
-
-  const currentOption = navigationOptions.find(
-    (option) => option.value === demo,
-  );
+export function NavigationDropdown({ url }: { url: string }) {
+  const navigationOptions = [
+    {
+      value: `${url}/`,
+      label: "Home",
+      icon: Home,
+    },
+    {
+      value: `${url}/shop`,
+      label: "Shop",
+      icon: ShoppingBag,
+    },
+    {
+      value: `${url}/api`,
+      label: "API",
+      icon: Code,
+    },
+  ];
 
   return (
-    <div className="mx-auto w-full max-w-sm">
-      <Select value={demo} onValueChange={handleNavigation}>
-        <SelectTrigger className="h-7 w-full border-muted-foreground text-muted-foreground">
-          <SelectValue>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              {currentOption?.icon && (
-                <currentOption.icon className="size-4 text-muted-foreground" />
-              )}
-              {currentOption?.label || "Select a demo"}
-            </div>
-          </SelectValue>
-        </SelectTrigger>
-
-        <SelectContent>
-          {navigationOptions.map((option) => (
-            <SelectItem key={option.value} value={option.value}>
-              <Link href={option.value} className="flex items-center gap-2">
-                <option.icon className="size-4" />
-                {option.label}
-              </Link>
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </div>
+    <nav className="flex items-center gap-4">
+      {navigationOptions.map((option) => (
+        <Link
+          key={option.value}
+          href={option.value}
+          className="flex items-center gap-2 rounded-md px-3 py-1 text-muted-foreground text-sm transition-colors hover:bg-muted/15"
+        >
+          <option.icon className="size-4" />
+          {option.label}
+        </Link>
+      ))}
+    </nav>
   );
 }
