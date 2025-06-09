@@ -1,5 +1,8 @@
 import { Analytics } from "@vercel/analytics/react";
-import { PrefetchCrossZoneLinksProvider } from "@vercel/microfrontends/next/client";
+import {
+  PrefetchCrossZoneLinks,
+  PrefetchCrossZoneLinksProvider,
+} from "@vercel/microfrontends/next/client";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { VercelToolbar } from "@vercel/toolbar/next";
 import { GeistSans } from "geist/font/sans";
