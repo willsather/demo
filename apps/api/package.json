@@ -9,8 +9,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@demo/ui": "workspace:*",
     "@demo/components": "workspace:*",
+    "@demo/ui": "workspace:*",
+    "@demo/products": "workspace:*",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "@vercel/toolbar": "^0.1.36",
