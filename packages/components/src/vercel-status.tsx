@@ -71,13 +71,7 @@ export function VercelStatusIndicator(): ReactElement {
     >
       {getStatusCircle(incident, loading)}
 
-      <p>
-        {loading
-          ? "Loading status..."
-          : incident
-            ? incident.name
-            : "All systems normal."}
-      </p>
+      <p>{incident ? incident.name : "All systems normal."}</p>
     </Link>
   );
 }

@@ -68,7 +68,7 @@ export default function StatusBar({ url }: { url: string }) {
             <path d="M37.5896 0.25L74.5396 64.25H0.639648L37.5896 0.25Z" />
           </svg>
 
-          <span className="text-muted-foreground mx-2 mb-1">{"/"}</span>
+          <span className="mx-2 mb-1 text-muted-foreground">{"/"}</span>
 
           <NavigationDropdown url={url} />
         </div>
