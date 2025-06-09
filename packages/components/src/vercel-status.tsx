@@ -14,7 +14,7 @@ export function VercelStatusIndicator(): ReactElement {
 
   useEffect(() => {
     async function fetchStatus() {
-      const res = await fetch("/api/status");
+      const res = await fetch("/api/status/vercel");
 
       if (!res.ok) {
         setLoading(false);

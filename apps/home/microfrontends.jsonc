@@ -20,6 +20,18 @@
         }
       ],
       "projectId": "prj_L2dZBPmaqwcd9IjPJj9R42eS7Ktx"
+    },
+    "demo-api": {
+      "packageName": "@demo/api",
+      "development": {
+        "local": 3002
+      },
+      "routing": [
+        {
+          "paths": ["/api", "/api/:path*"]
+        }
+      ],
+      "projectId": ""
     }
   }
 }

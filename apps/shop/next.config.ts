@@ -4,6 +4,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: ["@demo/components", "@demo/ui"],
+  basePath: "/shop",
 };
 
 const withMicrofrontendsConfig = withMicrofrontends(nextConfig);

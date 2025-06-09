@@ -39,7 +39,7 @@ export function NavigationDropdown() {
   const demo = getDemoByPath(usePathname());
 
   const handleNavigation = (value: string) => {
-    router.push(value);
+    router.replace(value);
   };
 
   const currentOption = navigationOptions.find(

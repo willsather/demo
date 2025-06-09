@@ -12,7 +12,7 @@ export default function Header() {
     <header className="bg-white shadow-sm">
       <div className="mx-auto px-6 py-3 md:px-10 lg:px-20">
         <div className="flex h-16 justify-between">
-          <Link href="/shop" className="flex flex-shrink-0 items-center">
+          <Link href="/" className="flex flex-shrink-0 items-center">
             <h1 className="font-bold text-blue-600 text-xl md:text-4xl">
               Shape Shop
             </h1>
@@ -20,10 +20,10 @@ export default function Header() {
 
           {/* Desktop navigation */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-4">
-            <Link href="/shop">
+            <Link href="/">
               <Button variant="ghost">Home</Button>
             </Link>
-            <Link href="/shop/products">
+            <Link href="/products">
               <Button variant="ghost">Products</Button>
             </Link>
           </div>
@@ -78,14 +78,14 @@ export default function Header() {
       <div className={`${isMenuOpen ? "block" : "hidden"} sm:hidden`}>
         <div className="space-y-1 pt-2 pb-3">
           <Link
-            href="/shop"
+            href="/"
             className="block border-transparent border-l-4 py-2 pr-4 pl-3 font-medium text-base text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link
-            href="/shop/products"
+            href="/products"
             className="block border-transparent border-l-4 py-2 pr-4 pl-3 font-medium text-base text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
             onClick={() => setIsMenuOpen(false)}
           >

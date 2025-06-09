@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "name": "lowercase-comments",
+      "description": "all comments should be lowercase",
+      "pattern": "//[^a-z].*",
+      "message": "Comments should be lowercase",
+      "severity": "warning"
+    }
+  ]
+} 
