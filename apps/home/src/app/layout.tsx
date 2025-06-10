@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <PrefetchCrossZoneLinksProvider>
-          <StatusBar url={env.BASE_URL} />
+          <StatusBar url={env.DEMO_BASE_URL} />
 
           {children}
 

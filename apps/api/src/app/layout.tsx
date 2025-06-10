@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StatusBar url={env.BASE_URL} />
+        <StatusBar url={env.DEMO_BASE_URL} />
 
         {children}
 
