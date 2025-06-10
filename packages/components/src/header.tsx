@@ -34,7 +34,7 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 right-0 left-0 z-50 flex h-14 items-center bg-neutral-100 transition-transform duration-300 ease-in-out dark:bg-neutral-900",
-        isVisible ? "translate-y-0" : "-translate-y-full", // Controlled by our custom hook's state
+        isVisible ? "translate-y-0" : "-translate-y-full",
       )}
     >
       <div className="flex h-full w-20 flex-shrink-0 items-center justify-center px-4">

@@ -15,7 +15,7 @@ export default function Sidebar({ baseUrl }: { baseUrl: string }) {
   return (
     <aside
       className={cn(
-        "fixed left-0 z-40 flex flex-col items-center overflow-y-auto bg-neutral-100 py-4 transition-all duration-300 ease-in-out dark:bg-neutral-900",
+        "fixed left-0 z-40 flex flex-col items-center overflow-y-auto bg-neutral-100 py-4 transition-all duration-300 ease-in-out dark:bg-neutral-900 rounded-br-2xl",
         isVisible
           ? "top-14 h-[calc(100vh-3.5rem)] w-20 translate-x-0"
           : "-translate-x-full top-0 h-screen w-0",
