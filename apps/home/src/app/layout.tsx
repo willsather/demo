@@ -1,19 +1,14 @@
 import { Analytics } from "@vercel/analytics/react";
-import {
-  PrefetchCrossZoneLinks,
-  PrefetchCrossZoneLinksProvider,
-} from "@vercel/microfrontends/next/client";
+import { PrefetchCrossZoneLinksProvider } from "@vercel/microfrontends/next/client";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { VercelToolbar } from "@vercel/toolbar/next";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import StatusBar from "@demo/components/status-bar";
+import Layout from "@demo/components/layout";
 
 import "@demo/ui/styles/tailwind.css";
-
-import { env } from "@/env";
 
 export const metadata: Metadata = {
   title: "Demo Home",
@@ -30,9 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <PrefetchCrossZoneLinksProvider>
-          <StatusBar url={env.DEMO_BASE_URL} />
-
-          {children}
+          <Layout>{children}</Layout>
 
           <Analytics />
           <SpeedInsights />

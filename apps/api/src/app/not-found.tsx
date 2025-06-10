@@ -16,7 +16,7 @@ export default function NotFound() {
         <div className="border-red-200 border-b bg-red-100 p-4">
           <div className="flex items-center gap-2">
             <AlertCircle className="h-5 w-5 text-red-700" />
-            <h1 className="font-medium text-red-900 text-lg">{code}</h1>
+            <h1 className="font-medium text-lg text-red-900">{code}</h1>
           </div>
         </div>
 
