@@ -12,9 +12,8 @@ import "@demo/ui/styles/tailwind.css";
 import { env } from "@/env";
 
 export const metadata: Metadata = {
-  title: "Demo Observability",
-  description:
-    "Basic Next.js Application to simulate various API / Page failures",
+  title: "Demo API",
+  description: "Basic Next.js Application to simulate various API features",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 
