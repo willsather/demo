@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": [
+    "hnd1",
+    "bom1",
+    "gru1",
+    "cdg1",
+    "arn1",
+    "lhr1",
+    "dub1",
+    "iad1",
+    "sfo1",
+    "cpt1"
+  ]
+}
