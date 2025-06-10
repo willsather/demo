@@ -1,21 +1,10 @@
 "use client";
 
-import { Clock, RotateCcw } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 
-import { ApiTester } from "@/components/api-tester";
-import { Button } from "@demo/ui/button";
+import { GetApi } from "@/components/api-tester";
 
 export default function Home() {
-  // Use a key to force re-render of child components when reset
-  const [resetKey, setResetKey] = useState(0);
-
-  const handleReset = () => {
-    // Increment the key to force a re-render of all ApiTester components
-    setResetKey((prev) => prev + 1);
-  };
-
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-12">
       <div className="mx-auto max-w-4xl space-y-8">
@@ -56,24 +45,38 @@ export default function Home() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <ApiTester
-            title="/api/status"
+          <GetApi
+            title="/api/status/vercel"
             description="Retrieves Vercel status and active incidents."
             endpoint="/status/vercel"
           />
-          <ApiTester
+          <GetApi
+            title="/api/status/[code]"
+            description="Test different HTTP status codes."
+            endpoint="/status/[code]"
+            dynamicParam="code"
+            dynamicParamOptions={["200", "201", "308", "404", "500"]}
+          />
+
+          <GetApi
             title="/api/region"
             description="Retrieves the Vercel functions geolocation region."
             endpoint="/region"
           />
+          <GetApi
+            title="/api/region/[region]"
+            description="Test different HTTP status codes."
+            endpoint="/region/[code]"
+            dynamicParam="code"
+            dynamicParamOptions={["ap", "br", "eu", "uk", "us", "za"]}
+          />
 
-          <ApiTester
+          <GetApi
             title="/api/shop/products"
             description="Retrieves mock product data."
             endpoint="/shop/products"
           />
-
-          <ApiTester
+          <GetApi
             title="/api/categories"
             description="Retrieves mock product category data."
             endpoint="/shop/categories"
