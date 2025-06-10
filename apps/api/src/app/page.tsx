@@ -52,7 +52,7 @@ export default function Home() {
           />
           <GetApi
             title="/api/status/[code]"
-            description="Test different HTTP status codes."
+            description="Force different HTTP status codes."
             endpoint="/status/[code]"
             dynamicParam="code"
             dynamicParamOptions={["200", "201", "308", "404", "500"]}
@@ -65,7 +65,7 @@ export default function Home() {
           />
           <GetApi
             title="/api/region/[region]"
-            description="Test different HTTP status codes."
+            description="Test different Vercel edge regions (with a delay)."
             endpoint="/region/[code]"
             dynamicParam="code"
             dynamicParamOptions={["ap", "br", "eu", "uk", "us", "za"]}
