@@ -47,9 +47,9 @@ export default function Header() {
           {isVisible ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
         <a
-          href="https://vercel.com"
+          href="https://vercel.com/willsather-ent/demo-home"
           className="hidden h-full w-full items-center justify-center md:flex"
-          aria-label="Vercel Homepage"
+          aria-label="Vercel"
         >
           <svg
             aria-label="Vercel logomark"
