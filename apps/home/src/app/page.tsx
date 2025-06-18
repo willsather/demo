@@ -26,7 +26,7 @@ export default async function HomePage() {
         </div>
 
         <h1 className="mb-4 font-extrabold text-gray-900 text-xl md:text-5xl">
-          Demo Home
+          Hi Demo!!
         </h1>
 
         {showCTA ? (
