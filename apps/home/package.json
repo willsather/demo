@@ -32,7 +32,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.5.2",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.10.4",
+    "@types/node": "^24.1.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react-swc": "^3.7.2",
@@ -42,8 +42,8 @@
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.7.0",
   "engines": {
-    "node": ">=22"
+    "node": ">=23"
   }
 }

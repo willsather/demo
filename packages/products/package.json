@@ -15,7 +15,7 @@
   "devDependencies": {
     "@demo/vitest-config": "workspace:*",
     "@demo/typescript-config": "workspace:*",
-    "@types/node": "^22.10.4",
+    "@types/node": "^24.1.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"

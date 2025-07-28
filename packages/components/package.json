@@ -19,7 +19,7 @@
   "devDependencies": {
     "@demo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.4",
-    "@types/node": "^22.15.21",
+    "@types/node": "^24.1.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19",
     "tailwindcss": "^4.1.4",
