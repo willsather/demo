@@ -1,5 +1,5 @@
 {
-  "extends": ["@demo/typescript-config/base.json"],
+  "extends": "@demo/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist"
   },

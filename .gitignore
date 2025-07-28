@@ -39,3 +39,4 @@ yarn-error.log*
 
 coverage.json
 .idea
+.env*.local
