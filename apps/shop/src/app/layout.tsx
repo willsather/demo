@@ -6,9 +6,10 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import type { ReactNode } from "react";
 
-import Header from "@/components/header";
 import Layout from "@demo/components/layout";
 import { cn } from "@demo/ui/lib/utils";
+
+import Header from "@/components/header";
 
 import "@demo/ui/styles/tailwind.css";
 

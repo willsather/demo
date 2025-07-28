@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-import { showHeroCTA } from "@/lib/flags";
 import { Button } from "@demo/ui/button";
+
+import { showHeroCTA } from "@/lib/flags";
 
 export default async function HomePage() {
   const showCTA = await showHeroCTA();

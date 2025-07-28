@@ -1,7 +1,9 @@
-import { ProductCard } from "@/components/product-card";
-import { getCategories, getCategory, getProducts } from "@demo/products";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+import { getCategories, getCategory, getProducts } from "@demo/products";
+
+import { ProductCard } from "@/components/product-card";
 
 export async function generateStaticParams() {
   const categories = await getCategories();
@@ -13,7 +15,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const category = await getCategory(id);
 
@@ -32,7 +36,9 @@ export async function generateMetadata({
 
 export default async function CategoryPage({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const category = await getCategory(id);
 

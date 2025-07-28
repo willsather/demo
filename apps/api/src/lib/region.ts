@@ -1,5 +1,6 @@
-import { wait } from "@/lib/utils";
 import { NextResponse } from "next/server";
+
+import { wait } from "@/lib/utils";
 
 export async function waitAndLogRegion(region: string) {
   console.log(`Starting ${region.toUpperCase()} Cron Job...`);

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-import { formatPrice } from "@/lib/utils";
 import { Button } from "@demo/ui/button";
 import {
   Card,
@@ -12,6 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@demo/ui/card";
+
+import { formatPrice } from "@/lib/utils";
 
 export type Product = {
   id: string;

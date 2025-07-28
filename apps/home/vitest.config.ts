@@ -1,7 +1,8 @@
 import path from "node:path";
-import { uiConfig } from "@demo/vitest-config/ui";
 import react from "@vitejs/plugin-react-swc";
 import { configDefaults, mergeConfig } from "vitest/config";
+
+import { uiConfig } from "@demo/vitest-config/ui";
 
 export default mergeConfig(uiConfig, {
   plugins: [react()],

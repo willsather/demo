@@ -1,9 +1,8 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { VercelToolbar } from "@vercel/toolbar/next";
-import { Geist } from "next/font/google";
-
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import type { ReactNode } from "react";
 
 import Layout from "@demo/components/layout";

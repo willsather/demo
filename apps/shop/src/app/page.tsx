@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ProductCard } from "@/components/product-card";
-import { showHeroCTA } from "@/lib/flags";
 import { getCategories, getProducts } from "@demo/products";
 import { Button } from "@demo/ui/button";
 import {
@@ -12,6 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@demo/ui/card";
+
+import { ProductCard } from "@/components/product-card";
+import { showHeroCTA } from "@/lib/flags";
 
 export default async function ShopPage() {
   const showCTA = await showHeroCTA();

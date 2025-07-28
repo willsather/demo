@@ -1,4 +1,4 @@
-export async function GET(request: Request) {
+export async function GET(_request: Request) {
   const res = await fetch(
     "https://www.vercel-status.com/api/v2/incidents/unresolved.json",
   );

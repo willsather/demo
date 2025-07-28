@@ -1,6 +1,8 @@
-import { ProductCard } from "@/components/product-card";
-import { getProducts } from "@demo/products";
 import Link from "next/link";
+
+import { getProducts } from "@demo/products";
+
+import { ProductCard } from "@/components/product-card";
 
 export const metadata = {
   title: "All Products | Shape Shop",

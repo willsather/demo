@@ -1,7 +1,9 @@
 "use client";
 
-import { cn } from "@demo/ui/lib/utils";
 import type React from "react";
+
+import { cn } from "@demo/ui/lib/utils";
+
 import { useSidebarToggle } from "./hooks/use-sidebar-toggle";
 
 export default function MainContent({

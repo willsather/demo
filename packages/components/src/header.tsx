@@ -1,5 +1,8 @@
 "use client";
 
+import { InfoIcon, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+
 import { cn } from "@demo/ui/lib/utils";
 import {
   Tooltip,
@@ -7,8 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@demo/ui/tooltip";
-import { InfoIcon, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+
 import { useSidebarToggle } from "./hooks/use-sidebar-toggle";
 import { VercelStatusIndicator } from "./vercel-status";
 

@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { getProduct, getProducts } from "@demo/products";
+import { Button } from "@demo/ui/button";
+
 import { ProductCard } from "@/components/product-card";
 import { formatPrice } from "@/lib/utils";
-import { getCategory, getProduct, getProducts } from "@demo/products";
-import { Button } from "@demo/ui/button";
 
 export async function generateStaticParams() {
   const products = await getProducts();
@@ -17,7 +18,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const product = await getProduct(id);
 

@@ -1,5 +1,5 @@
 export async function GET(
-  request: Request,
+  _request: Request,
   { params }: { params: Promise<{ code: string }> },
 ) {
   console.log("STATUS API");

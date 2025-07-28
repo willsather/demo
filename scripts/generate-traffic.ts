@@ -58,7 +58,7 @@ async function main() {
         const fullUrl = `${BASE_URL}${route}`;
         await page.goto(fullUrl, { waitUntil: "load", timeout: 10000 });
         await page.waitForTimeout(500 + Math.random() * 1000);
-      } catch (error) {
+      } catch (_error) {
         throw new Error("Visit Failed");
       }
     }

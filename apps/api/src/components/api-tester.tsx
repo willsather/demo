@@ -48,7 +48,7 @@ export function GetApi({
       const res = await fetch(url);
       setStatus(res.status);
       setResponse(await res.json());
-    } catch (err) {
+    } catch (_err) {
     } finally {
       setLoading(false);
     }
