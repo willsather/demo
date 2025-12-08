@@ -5,33 +5,30 @@
       "packageName": "@demo/home",
       "development": {
         "local": 3000,
-        "fallback": "demo.sather.ws"
+        "fallback": "demo.sather.ws",
       },
-      "projectId": "prj_hU7b2hLY7vTwAU79rHWe1wTWJB3v"
     },
     "demo-shop": {
       "packageName": "@demo/shop",
       "development": {
-        "local": 3001
+        "local": 3001,
       },
       "routing": [
         {
-          "paths": ["/shop", "/shop/:path*"]
-        }
+          "paths": ["/shop", "/shop/:path*"],
+        },
       ],
-      "projectId": "prj_L2dZBPmaqwcd9IjPJj9R42eS7Ktx"
     },
     "demo-api": {
       "packageName": "@demo/api",
       "development": {
-        "local": 3002
+        "local": 3002,
       },
       "routing": [
         {
-          "paths": ["/api", "/api/:path*"]
-        }
+          "paths": ["/api", "/api/:path*"],
+        },
       ],
-      "projectId": "prj_22Doy337ibURaMHtNFexVvd5gqHT"
-    }
-  }
+    },
+  },
 }

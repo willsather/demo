@@ -3,7 +3,7 @@ import { withVercelToolbar } from "@vercel/toolbar/plugins/next";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@demo/components", "@demo/ui"],
+	turbopack: {},
 };
 
 const withMicrofrontendsConfig = withMicrofrontends(nextConfig);

@@ -14,14 +14,14 @@
     "@demo/ui": "workspace:*",
     "@vercel/analytics": "^1.5.0",
     "@vercel/functions": "^2.0.0",
-    "@vercel/microfrontends": "^1.2.4",
+    "@vercel/microfrontends": "^2.2.1",
     "@vercel/speed-insights": "^1.2.0",
-    "@vercel/toolbar": "^0.1.36",
+    "@vercel/toolbar": "^0.1.41",
     "geist": "^1.4.2",
     "lucide-react": "^0.487.0",
-    "next": "^15.4.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "next": "16.0.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "zod": "^3.25.56"
   },
   "devDependencies": {
@@ -33,8 +33,8 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.16.5",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "jsdom": "^25.0.1",
     "postcss": "^8.5.3",
@@ -44,6 +44,6 @@
   },
   "packageManager": "pnpm@10.7.0",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   }
 }
