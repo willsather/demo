@@ -10,7 +10,9 @@ export default function Home() {
       <div className="mx-auto max-w-4xl space-y-8">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div className="space-y-2">
-            <h1 className="font-bold text-3xl tracking-tight">Demo API</h1>
+            <h1 className="font-bold text-3xl tracking-tight">
+              TESTING Demo API
+            </h1>
             <p className="text-gray-500">
               A simulation environment for testing Vercel platform behaviors.
               Generate HTTP status codes, test response times, and interact with
