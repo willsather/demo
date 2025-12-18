@@ -28,7 +28,7 @@ export default function Sidebar({ baseUrl }: { baseUrl: string }) {
           return (
             <a
               key={item.href}
-              href={`${baseUrl}${item.href}`}
+              href={item.href}
               className={cn(
                 "relative flex size-12 items-center justify-center rounded-2xl text-2xl transition-all duration-200 ease-in-out hover:rounded-xl hover:shadow-md focus-visible:outline-none focus-visible:ring-0",
                 item.accentColor,
