@@ -14,7 +14,6 @@ export default function ErrorPage({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
@@ -26,23 +25,27 @@ export default function ErrorPage({
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-red-50 p-6">
-      <div className="w-full max-w-md overflow-hidden rounded-lg border border-red-200 bg-white shadow-sm">
-        <div className="border-red-200 border-b bg-red-100 p-4">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-red-50 dark:bg-red-950/20 p-6">
+      <div className="w-full max-w-md overflow-hidden rounded-lg border border-red-200 dark:border-red-800 bg-card shadow-sm">
+        <div className="border-red-200 dark:border-red-800 border-b bg-red-100 dark:bg-red-900/30 p-4">
           <div className="flex items-center gap-2">
-            <AlertOctagon className="h-5 w-5 text-red-700" />
-            <h1 className="font-medium text-lg text-red-900">{code}</h1>
+            <AlertOctagon className="h-5 w-5 text-red-700 dark:text-red-400" />
+            <h1 className="font-medium text-lg text-red-900 dark:text-red-300">
+              {code}
+            </h1>
           </div>
         </div>
 
         <div className="space-y-4 p-6">
           <div className="space-y-2">
-            <h2 className="font-bold text-2xl">{statusInfo.name}</h2>
-            <p className="text-gray-600">{statusInfo.description}</p>
+            <h2 className="font-bold text-2xl text-foreground">
+              {statusInfo.name}
+            </h2>
+            <p className="text-muted-foreground">{statusInfo.description}</p>
           </div>
 
-          <div className="rounded-md border bg-gray-50 p-4">
-            <pre className="whitespace-pre-wrap text-gray-700 text-sm">
+          <div className="rounded-md border border-border bg-muted p-4">
+            <pre className="whitespace-pre-wrap text-muted-foreground text-sm">
               {JSON.stringify(
                 {
                   status: code,
@@ -59,8 +62,8 @@ export default function ErrorPage({
           <div className="flex gap-2 pt-2">
             <Button
               onClick={reset}
-              variant="default"
-              className="flex items-center gap-2 bg-red-600 hover:bg-red-700"
+              variant="destructive"
+              className="flex items-center gap-2"
             >
               Try Again
             </Button>

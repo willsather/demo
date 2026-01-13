@@ -54,16 +54,16 @@ export default async function ProductPage({
   const relatedProducts = await getProducts({ featured: true });
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-background">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-secondary py-4">
         <div className="mx-auto px-6 md:px-10 lg:px-20">
-          <div className="flex items-center text-gray-600 text-sm">
-            <Link href="/" className="hover:text-blue-600">
+          <div className="flex items-center text-muted-foreground text-sm">
+            <Link href="/" className="hover:text-primary">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-gray-900">{product.name}</span>
+            <span className="text-foreground">{product.name}</span>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ export default async function ProductPage({
         <div className="mx-auto">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             {/* Product Image */}
-            <div className="flex items-center justify-center rounded-lg bg-gray-50 p-8">
+            <div className="flex items-center justify-center rounded-lg bg-muted p-8">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -85,17 +85,21 @@ export default async function ProductPage({
 
             {/* Product Info */}
             <div className="space-y-6">
-              <h1 className="font-bold text-3xl text-gray-900 md:text-4xl">
+              <h1 className="font-bold text-3xl text-foreground md:text-4xl">
                 {product.name}
               </h1>
-              <p className="text-gray-600 text-xl">{product.description}</p>
-              <div className="font-bold text-3xl text-blue-600">
+              <p className="text-muted-foreground text-xl">
+                {product.description}
+              </p>
+              <div className="font-bold text-3xl text-primary">
                 {formatPrice(product.price)}
               </div>
 
-              <div className="border-gray-200 border-t pt-6">
-                <h3 className="mb-4 font-semibold text-lg">Details</h3>
-                <p className="text-gray-600">{product.details}</p>
+              <div className="border-border border-t pt-6">
+                <h3 className="mb-4 font-semibold text-lg text-foreground">
+                  Details
+                </h3>
+                <p className="text-muted-foreground">{product.details}</p>
               </div>
 
               <div className="flex flex-col gap-4 pt-6 sm:flex-row">
@@ -110,9 +114,9 @@ export default async function ProductPage({
 
       {/* Related Products Section */}
       {relatedProducts.length > 0 && (
-        <section className="bg-gray-50 px-6 py-12 md:px-10 lg:px-20">
+        <section className="bg-secondary px-6 py-12 md:px-10 lg:px-20">
           <div className="mx-auto">
-            <h2 className="mb-8 font-bold text-2xl text-gray-900">
+            <h2 className="mb-8 font-bold text-2xl text-foreground">
               Related Products
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -37,9 +37,6 @@ export default function RootLayout({
             <Header />
             {children}
           </Layout>
-
-          {children}
-
           <Analytics />
           <SpeedInsights />
           {process.env.NODE_ENV === "development" && <VercelToolbar />}

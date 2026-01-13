@@ -6,36 +6,38 @@ import { GetApi } from "@/components/api-tester";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-12">
+    <main className="min-h-screen bg-background p-6 md:p-12">
       <div className="mx-auto max-w-4xl space-y-8">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div className="space-y-2">
-            <h1 className="font-bold text-3xl tracking-tight">Demo API</h1>
-            <p className="text-gray-500">
+            <h1 className="font-bold text-3xl tracking-tight text-foreground">
+              Demo API
+            </h1>
+            <p className="text-muted-foreground">
               A simulation environment for testing Vercel platform behaviors.
               Generate HTTP status codes, test response times, and interact with
               endpoints that can succeed or fail on demand.
             </p>
-            <div className="space-y-1 text-gray-500 text-sm">
+            <div className="space-y-1 text-muted-foreground text-sm">
               <div>
                 Try status codes:
                 <Link
                   href="/status/200"
-                  className="mr-1 ml-1 font-bold text-green-700 hover:underline"
+                  className="mr-1 ml-1 font-bold text-emerald-600 dark:text-emerald-400 hover:underline"
                 >
                   200
                 </Link>{" "}
                 |
                 <Link
                   href="/status/404"
-                  className="mr-1 ml-1 font-bold text-red-700 hover:underline"
+                  className="mr-1 ml-1 font-bold text-red-600 dark:text-red-400 hover:underline"
                 >
                   404
                 </Link>{" "}
                 |
                 <Link
                   href="/status/500"
-                  className="ml-1 font-bold text-red-700 hover:underline"
+                  className="ml-1 font-bold text-red-600 dark:text-red-400 hover:underline"
                 >
                   500
                 </Link>

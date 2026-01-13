@@ -49,20 +49,20 @@ export default async function CategoryPage({
   const products = await getProducts({ category: id });
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-background">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-secondary py-4">
         <div className="mx-auto px-6 md:px-10 lg:px-20">
-          <div className="flex items-center text-gray-600 text-sm">
-            <Link href="/" className="hover:text-blue-600">
+          <div className="flex items-center text-muted-foreground text-sm">
+            <Link href="/" className="hover:text-primary">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link href="//products" className="hover:text-blue-600">
+            <Link href="/products" className="hover:text-primary">
               Products
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-gray-900">{category.name}</span>
+            <span className="text-foreground">{category.name}</span>
           </div>
         </div>
       </div>
@@ -71,10 +71,12 @@ export default async function CategoryPage({
       <section className="px-6 py-16 md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h1 className="font-bold text-4xl text-gray-900">
+            <h1 className="font-bold text-4xl text-foreground">
               {category.name}
             </h1>
-            <p className="mt-4 text-gray-600 text-lg">{category.description}</p>
+            <p className="mt-4 text-muted-foreground text-lg">
+              {category.description}
+            </p>
           </div>
 
           {products.length > 0 ? (
@@ -85,7 +87,7 @@ export default async function CategoryPage({
             </div>
           ) : (
             <div className="py-12 text-center">
-              <p className="text-gray-600 text-lg">
+              <p className="text-muted-foreground text-lg">
                 No products found in this category.
               </p>
             </div>

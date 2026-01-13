@@ -119,32 +119,37 @@ function ResponseBlock({
   status: number | null;
 }) {
   const getStatusColor = (code: number | null) => {
-    if (code == null) return "border-gray-200 bg-gray-50";
-    if (code >= 200 && code < 300) return "border-green-200 bg-green-50";
-    if (code >= 300 && code < 400) return "border-yellow-200 bg-yellow-50";
-    if (code >= 400) return "border-red-200 bg-red-50";
-    return "border-gray-200 bg-gray-50";
+    if (code == null) return "border-border bg-muted";
+    if (code >= 200 && code < 300)
+      return "border-emerald-500/30 bg-emerald-500/10 dark:border-emerald-400/30 dark:bg-emerald-400/10";
+    if (code >= 300 && code < 400)
+      return "border-yellow-500/30 bg-yellow-500/10 dark:border-yellow-400/30 dark:bg-yellow-400/10";
+    if (code >= 400)
+      return "border-red-500/30 bg-red-500/10 dark:border-red-400/30 dark:bg-red-400/10";
+    return "border-border bg-muted";
   };
 
   const getStatusTextColor = (code: number | null) => {
-    if (code == null) return "border-gray-200 bg-gray-50";
-    if (code >= 200 && code < 300) return "text-green-700";
-    if (code >= 300 && code < 400) return "text-yellow-700";
-    if (code >= 400) return "text-red-700";
-    return "text-gray-700";
+    if (code == null) return "text-muted-foreground";
+    if (code >= 200 && code < 300)
+      return "text-emerald-700 dark:text-emerald-400";
+    if (code >= 300 && code < 400)
+      return "text-yellow-700 dark:text-yellow-400";
+    if (code >= 400) return "text-red-700 dark:text-red-400";
+    return "text-muted-foreground";
   };
 
   if (loading) {
     return (
-      <div className="min-h-24 animate-pulse rounded-md border p-4">
+      <div className="min-h-24 animate-pulse rounded-md border border-border p-4">
         <div className="flex items-start">
           <div className="w-full">
-            <div className="mb-3 h-4 w-24 rounded bg-gray-200" />
+            <div className="mb-3 h-4 w-24 rounded bg-muted" />
             <div className="space-y-2">
-              <div className="h-3 w-full rounded bg-gray-200" />
-              <div className="h-3 w-5/6 rounded bg-gray-200" />
-              <div className="h-3 w-4/6 rounded bg-gray-200" />
-              <div className="h-3 w-3/6 rounded bg-gray-200" />
+              <div className="h-3 w-full rounded bg-muted" />
+              <div className="h-3 w-5/6 rounded bg-muted" />
+              <div className="h-3 w-4/6 rounded bg-muted" />
+              <div className="h-3 w-3/6 rounded bg-muted" />
             </div>
           </div>
         </div>
@@ -184,8 +189,8 @@ function ResponseBlock({
 
   return (
     <div>
-      <div className="flex min-h-24 items-center justify-center rounded-md border border-dashed p-4">
-        <p className="text-gray-400 text-sm">
+      <div className="flex min-h-24 items-center justify-center rounded-md border border-dashed border-border p-4">
+        <p className="text-muted-foreground text-sm">
           Click any button above to test the endpoint
         </p>
       </div>

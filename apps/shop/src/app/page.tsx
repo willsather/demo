@@ -21,25 +21,23 @@ export default async function ShopPage() {
   const featuredProducts = await getProducts({ featured: true });
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative px-6 py-20 md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
             <div className="space-y-6">
-              <h1 className="font-extrabold text-4xl text-gray-900 leading-tight md:text-5xl lg:text-6xl">
-                Discover Perfect <span className="text-blue-600">Shapes</span>{" "}
+              <h1 className="font-extrabold text-4xl text-foreground leading-tight md:text-5xl lg:text-6xl">
+                Discover Perfect <span className="text-primary">Shapes</span>{" "}
                 for Your Designs
               </h1>
-              <p className="max-w-lg text-gray-600 text-lg">
+              <p className="max-w-lg text-muted-foreground text-lg">
                 Explore our collection of premium geometric shapes, crafted with
                 mathematical precision and artistic flair.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/products">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    Shop Now
-                  </Button>
+                  <Button size="lg">Shop Now</Button>
                 </Link>
 
                 {showCTA && (
@@ -94,13 +92,13 @@ export default async function ShopPage() {
       </section>
 
       {/* Featured Products */}
-      <section className="bg-gray-50 px-6 py-16 md:px-10 lg:px-20">
+      <section className="bg-secondary px-6 py-16 md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-3xl text-gray-900">
+            <h2 className="font-bold text-3xl text-foreground">
               Featured Shapes
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-muted-foreground text-lg">
               Our most popular geometric masterpieces
             </p>
           </div>
@@ -122,7 +120,7 @@ export default async function ShopPage() {
       </section>
 
       {/* Middle CTA */}
-      <section className="bg-green-600 px-6 py-16 text-white md:px-10 lg:px-20">
+      <section className="bg-emerald-600 dark:bg-emerald-700 px-6 py-16 text-white md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-6 font-bold text-3xl">
             Transform Your Designs Today
@@ -133,7 +131,7 @@ export default async function ShopPage() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-green-600 hover:bg-gray-100"
+            className="bg-white text-emerald-600 hover:bg-neutral-100 dark:hover:bg-neutral-200"
             asChild
           >
             <Link href="/products">Browse Collection</Link>
@@ -142,13 +140,13 @@ export default async function ShopPage() {
       </section>
 
       {/* Category Grid */}
-      <section className="bg-gray-50 px-6 py-16 md:px-10 lg:px-20">
+      <section className="bg-secondary px-6 py-16 md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-3xl text-gray-900">
+            <h2 className="font-bold text-3xl text-foreground">
               Shop by Category
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-muted-foreground text-lg">
               Find the perfect shapes for your next project
             </p>
           </div>
@@ -161,7 +159,7 @@ export default async function ShopPage() {
               >
                 <Link
                   href={`/categories/${category.id}`}
-                  className="relative flex h-48 items-center justify-center bg-gray-100 p-6"
+                  className="relative flex h-48 items-center justify-center bg-muted p-6"
                 >
                   <Image
                     src={category.image}
@@ -191,7 +189,7 @@ export default async function ShopPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-blue-600 px-6 py-16 text-white md:px-10 lg:px-20">
+      <section className="bg-primary px-6 py-16 text-primary-foreground md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-6 font-bold text-3xl">
             Ready to Shape Your Next Project?
@@ -200,10 +198,7 @@ export default async function ShopPage() {
             Join thousands of designers and creators who use our premium shapes
             in their projects.
           </p>
-          <Button
-            size="lg"
-            className="bg-white text-blue-600 hover:bg-gray-100"
-          >
+          <Button size="lg" variant="secondary">
             Start Shopping
           </Button>
         </div>

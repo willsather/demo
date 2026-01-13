@@ -10,20 +10,19 @@ export const metadata = {
 };
 
 export default async function ProductsPage() {
-  // Fetch all products
   const products = await getProducts();
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-background">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-secondary py-4">
         <div className="mx-auto px-6 md:px-10 lg:px-20">
-          <div className="flex items-center text-gray-600 text-sm">
-            <Link href="/" className="hover:text-blue-600">
+          <div className="flex items-center text-muted-foreground text-sm">
+            <Link href="/" className="hover:text-primary">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-gray-900">All Products</span>
+            <span className="text-foreground">All Products</span>
           </div>
         </div>
       </div>
@@ -32,8 +31,8 @@ export default async function ProductsPage() {
       <section className="px-6 py-16 md:px-10 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h1 className="font-bold text-4xl text-gray-900">All Shapes</h1>
-            <p className="mt-4 text-gray-600 text-lg">
+            <h1 className="font-bold text-4xl text-foreground">All Shapes</h1>
+            <p className="mt-4 text-muted-foreground text-lg">
               Browse our complete collection of premium geometric shapes
             </p>
           </div>
