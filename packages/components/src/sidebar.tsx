@@ -39,7 +39,7 @@ export function AppSidebar() {
           >
             <path d="M37.5896 0.25L74.5396 64.25H0.639648L37.5896 0.25Z" />
           </svg>
-          <span className="font-semibold">Demo</span>
+          <span className="text-lg font-semibold">Demo</span>
         </a>
       </SidebarHeader>
 

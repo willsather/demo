@@ -27,8 +27,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(fontSans.variable, "bg-neutral-100")}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(fontSans.variable, "bg-sidebar")}>
         <Layout>{children}</Layout>
 
         <Analytics />
