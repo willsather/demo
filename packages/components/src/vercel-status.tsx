@@ -65,13 +65,9 @@ export function VercelStatusIndicator(): ReactElement {
   };
 
   return (
-    <Link
-      href="https://vercel-status.com"
-      className="flex items-center justify-end gap-2"
-    >
+    <Link href="https://vercel-status.com" className="flex items-center gap-2">
       {getStatusCircle(incident, loading)}
-
-      <p>{incident ? incident.name : "All systems normal."}</p>
+      <span>{incident ? incident.name : "All systems normal"}</span>
     </Link>
   );
 }
