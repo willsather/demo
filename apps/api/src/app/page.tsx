@@ -6,13 +6,11 @@ import { GetApi } from "@/components/api-tester";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background p-6 md:p-12">
-      <div className="mx-auto max-w-4xl space-y-8">
+    <main className="min-h-screen bg-background px-4 py-6 md:px-6">
+      <h1 className="font-bold text-foreground text-2xl">Demo API</h1>
+      <div className="mx-auto max-w-7xl space-y-8 mt-8">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div className="space-y-2">
-            <h1 className="font-bold text-3xl tracking-tight text-foreground">
-              Demo API
-            </h1>
             <p className="text-muted-foreground">
               A simulation environment for testing Vercel platform behaviors.
               Generate HTTP status codes, test response times, and interact with
@@ -46,7 +44,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <GetApi
             title="/api/status/vercel"
             description="Retrieves Vercel status and active incidents."

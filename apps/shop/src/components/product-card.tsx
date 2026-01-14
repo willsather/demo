@@ -33,7 +33,7 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-lg">
       <Link href={`/products/${product.id}`}>
-        <div className="relative flex h-48 items-center justify-center bg-muted p-6">
+        <div className="relative flex h-48 items-center justify-center bg-white dark:bg-neutral-800 p-6">
           <Image
             src={product.image}
             alt={product.name}
@@ -58,14 +58,14 @@ export function ProductCard({ product }: ProductCardProps) {
         </Link>
       </CardContent>
 
-      <CardFooter className="flex gap-2">
-        <Button className="flex-1">Add to Cart</Button>
-
-        <Link href={`/products/${product.id}`} className="flex-1">
+      <CardFooter className="flex gap-2 p-4">
+        <Link href={`/products/${product.id}`} className="flex-1 min-w-0">
           <Button variant="outline" className="w-full">
-            View Details
+            Details
           </Button>
         </Link>
+
+        <Button className="flex-1 min-w-0">Add to Cart</Button>
       </CardFooter>
     </Card>
   );

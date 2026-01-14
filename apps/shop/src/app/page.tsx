@@ -1,29 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { getCategories, getProducts } from "@demo/products";
+import { getProducts } from "@demo/products";
 import { Button } from "@demo/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@demo/ui/card";
 
 import { ProductCard } from "@/components/product-card";
 import { showHeroCTA } from "@/lib/flags";
 
 export default async function ShopPage() {
   const showCTA = await showHeroCTA();
-
-  const categories = await getCategories();
   const featuredProducts = await getProducts({ featured: true });
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background px-4 py-6 md:px-6">
       {/* Hero Section */}
-      <section className="relative px-6 py-20 md:px-10 lg:px-20">
+      <section className="relative mt-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
             <div className="space-y-6">
@@ -92,9 +83,9 @@ export default async function ShopPage() {
       </section>
 
       {/* Featured Products */}
-      <section className="bg-secondary px-6 py-16 md:px-10 lg:px-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
+      <section className="bg-neutral-100 dark:bg-neutral-900 p-8 mt-12 rounded-lg">
+        <div className="mb-12 flex justify-between items-start">
+          <div>
             <h2 className="font-bold text-3xl text-foreground">
               Featured Shapes
             </h2>
@@ -102,105 +93,17 @@ export default async function ShopPage() {
               Our most popular geometric masterpieces
             </p>
           </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link href="/products">
-              <Button size="lg" variant="outline">
-                View All Products
-              </Button>
-            </Link>
-          </div>
+          <Link href="/products">
+            <Button size="lg" variant="outline">
+              View All Products
+            </Button>
+          </Link>
         </div>
-      </section>
 
-      {/* Middle CTA */}
-      <section className="bg-emerald-600 dark:bg-emerald-700 px-6 py-16 text-white md:px-10 lg:px-20">
-        <div className="mx-auto max-w-7xl text-center">
-          <h2 className="mb-6 font-bold text-3xl">
-            Transform Your Designs Today
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg">
-            Access our extensive library of premium geometric shapes and take
-            your creative projects to the next level.
-          </p>
-          <Button
-            size="lg"
-            className="bg-white text-emerald-600 hover:bg-neutral-100 dark:hover:bg-neutral-200"
-            asChild
-          >
-            <Link href="/products">Browse Collection</Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Category Grid */}
-      <section className="bg-secondary px-6 py-16 md:px-10 lg:px-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="font-bold text-3xl text-foreground">
-              Shop by Category
-            </h2>
-            <p className="mt-4 text-muted-foreground text-lg">
-              Find the perfect shapes for your next project
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {categories.map((category) => (
-              <Card
-                key={category.id}
-                className="overflow-hidden transition-shadow duration-300 hover:shadow-lg"
-              >
-                <Link
-                  href={`/categories/${category.id}`}
-                  className="relative flex h-48 items-center justify-center bg-muted p-6"
-                >
-                  <Image
-                    src={category.image}
-                    alt={category.name}
-                    width={100}
-                    height={100}
-                    className="object-contain"
-                  />
-                </Link>
-
-                <CardHeader>
-                  <CardTitle className="text-xl">{category.name}</CardTitle>
-                  <CardDescription>{category.description}</CardDescription>
-                </CardHeader>
-
-                <CardFooter>
-                  <Link href={`/categories/${category.id}`}>
-                    <Button variant="outline" className="w-full">
-                      Browse {category.name}
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="bg-primary px-6 py-16 text-primary-foreground md:px-10 lg:px-20">
-        <div className="mx-auto max-w-7xl text-center">
-          <h2 className="mb-6 font-bold text-3xl">
-            Ready to Shape Your Next Project?
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg">
-            Join thousands of designers and creators who use our premium shapes
-            in their projects.
-          </p>
-          <Button size="lg" variant="secondary">
-            Start Shopping
-          </Button>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {featuredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </section>
     </main>
