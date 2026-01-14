@@ -18,6 +18,9 @@ export function SidebarFooterContent() {
   const { incident, loading, statusText } = useVercelStatus();
 
   const getBackgroundColor = () => {
+    if (loading || incident === null) {
+      return "bg-gray-500/20 hover:bg-gray-500/30";
+    }
     if (incident?.impact === "critical") {
       return "bg-red-500/20 hover:bg-red-500/30";
     }
@@ -31,6 +34,9 @@ export function SidebarFooterContent() {
   };
 
   const getBorderColor = () => {
+    if (loading || incident === null) {
+      return "border border-gray-500/50";
+    }
     if (incident?.impact === "critical") {
       return "border border-red-500/50";
     }
@@ -44,6 +50,9 @@ export function SidebarFooterContent() {
   };
 
   const getRegionBadgeColor = () => {
+    if (loading || incident === null) {
+      return "bg-gray-500/30 text-gray-200";
+    }
     if (incident?.impact === "critical") {
       return "bg-red-500/30 text-red-200";
     }
@@ -91,13 +100,13 @@ export function SidebarFooterContent() {
             </span>
           </div>
         </div>
-        {incident !== null && (
-          <p className="text-xs text-sidebar-foreground/70">
-            {incident
+        <p className="text-xs text-sidebar-foreground/70 min-h-[1.25rem]">
+          {incident === null || loading
+            ? "\u00A0"
+            : incident
               ? incident.name || "Unknown incident"
               : "All systems operational"}
-          </p>
-        )}
+        </p>
       </a>
       <ThemeToggle />
     </div>
